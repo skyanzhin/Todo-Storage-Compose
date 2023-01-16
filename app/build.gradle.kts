@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    kotlin("kapt")
     kotlin("android")
 }
 
@@ -65,6 +66,10 @@ dependencies {
     implementation(androidx.lifecycleruntimektx)
     implementation(compose.activity)
     implementation(compose.navigation)
+
+    implementation(libs.hilt)
+    implementation(libs.hiltnavigation)
+    kapt(libs.hiltcompiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(androidx.junit)
