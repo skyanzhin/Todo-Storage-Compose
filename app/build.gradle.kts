@@ -66,10 +66,16 @@ dependencies {
     implementation(androidx.lifecycleruntimektx)
     implementation(compose.activity)
     implementation(compose.navigation)
+    implementation(compose.lifecycleruntime)
+    implementation(compose.lifecycleviewmodel)
 
     implementation(libs.hilt)
     implementation(libs.hiltnavigation)
     kapt(libs.hiltcompiler)
+
+    implementation(libs.room)
+    implementation(libs.roomktx)
+    kapt(libs.roomcompiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(androidx.junit)

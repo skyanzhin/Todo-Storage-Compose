@@ -8,5 +8,7 @@ icons = { module = "androidx.compose.material:material-icons-extended", version.
 uitoolingpreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "current" }
 activity = { module = "androidx.activity:activity-compose", version = "1.4.0" }
 navigation = { module = "androidx.navigation:navigation-compose", version = "2.4.0-rc01" }
+lifecycleruntime = { module = "androidx.lifecycle:lifecycle-runtime-compose", version = "2.6.0-alpha03" }
+lifecycleviewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.6.0-alpha03" }
 uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "current" }
 junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "current" }
