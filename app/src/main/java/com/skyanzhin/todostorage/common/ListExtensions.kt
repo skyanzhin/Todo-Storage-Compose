@@ -1,4 +1,4 @@
-package com.skyanzhin.todostorage.ui.common
+package com.skyanzhin.todostorage.common
 
 import com.skyanzhin.todostorage.domain.todo.model.TodoDomainModel
 import com.skyanzhin.todostorage.ui.features.todo.model.TasksFilterType

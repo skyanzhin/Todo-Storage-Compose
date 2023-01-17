@@ -1,4 +1,4 @@
-package com.skyanzhin.todostorage.ui.common
+package com.skyanzhin.todostorage.common
 
 import com.skyanzhin.todostorage.data.local.model.TodoLocalModel
 import com.skyanzhin.todostorage.domain.todo.model.TodoDomainModel

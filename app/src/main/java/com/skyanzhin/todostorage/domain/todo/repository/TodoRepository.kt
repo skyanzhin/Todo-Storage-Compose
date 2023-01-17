@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface TodoRepository {
     fun getTodosFlow(): Flow<Result<List<TodoDomainModel>>>
-    fun getTodo(todoId: Long): Flow<Result<TodoDomainModel>>
+    fun getTodo(id: Long): Flow<Result<TodoDomainModel>>
     suspend fun createTodo(todoDomainModel: TodoDomainModel)
     suspend fun updateTodo(todoDomainModel: TodoDomainModel)
     suspend fun deleteTodo(todoDomainModel: TodoDomainModel)

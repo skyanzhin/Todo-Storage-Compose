@@ -9,7 +9,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId  = "com.skyanzhin.todostorage"
+        applicationId = "com.skyanzhin.todostorage"
         minSdk = 29
         targetSdk = 33
         versionCode = 1

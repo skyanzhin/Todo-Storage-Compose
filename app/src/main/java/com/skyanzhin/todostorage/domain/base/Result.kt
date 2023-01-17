@@ -4,5 +4,5 @@ sealed class Result<out R> {
     data class Success<out T>(val data: T) : Result<T>()
     data class Error(val error: Exception) : Result<Nothing>()
 
-    val success get() = this is Success && data != null
+    val isSuccess get() = this is Success && data != null
 }

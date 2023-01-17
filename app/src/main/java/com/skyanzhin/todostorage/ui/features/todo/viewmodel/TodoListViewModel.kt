@@ -7,8 +7,8 @@ import com.skyanzhin.todostorage.data.errors.TodoListExceptions
 import com.skyanzhin.todostorage.domain.base.Result
 import com.skyanzhin.todostorage.domain.todo.repository.TodoRepository
 import com.skyanzhin.todostorage.ui.base.viewmodel.BaseViewModel
-import com.skyanzhin.todostorage.ui.common.Async
-import com.skyanzhin.todostorage.ui.common.filterByType
+import com.skyanzhin.todostorage.common.Async
+import com.skyanzhin.todostorage.common.filterByType
 import com.skyanzhin.todostorage.ui.features.todo.model.TasksFilterType
 import com.skyanzhin.todostorage.ui.features.todo.model.TodoUiModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,7 +38,6 @@ class TodoListViewModel @Inject constructor(
                     todosResult.data.filterByType(type)
                 }
                 is Result.Error -> {
-                    //TODO: show error message
                     handleError(todosResult.error as? TodoListExceptions)
                     listOf()
                 }

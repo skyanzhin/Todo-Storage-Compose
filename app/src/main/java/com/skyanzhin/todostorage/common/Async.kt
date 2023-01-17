@@ -1,4 +1,4 @@
-package com.skyanzhin.todostorage.ui.common
+package com.skyanzhin.todostorage.common
 
 sealed class Async<out T> {
     object Loading : Async<Nothing>()

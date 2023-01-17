@@ -1,12 +1,11 @@
 package com.skyanzhin.todostorage.data.repository
 
 import com.skyanzhin.todostorage.data.TodoDataSource
-import com.skyanzhin.todostorage.data.errors.TodoListExceptions
 import com.skyanzhin.todostorage.domain.base.Result
 import com.skyanzhin.todostorage.domain.todo.model.TodoDomainModel
 import com.skyanzhin.todostorage.domain.todo.repository.TodoRepository
-import com.skyanzhin.todostorage.ui.common.asDomainModel
-import com.skyanzhin.todostorage.ui.common.asLocalModel
+import com.skyanzhin.todostorage.common.asDomainModel
+import com.skyanzhin.todostorage.common.asLocalModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -25,8 +24,8 @@ class TodoRepositoryImpl(
         }
     }
 
-    override fun getTodo(todoId: Long): Flow<Result<TodoDomainModel>> {
-        return todoDataSource.getTodo(todoId).map { result ->
+    override fun getTodo(id: Long): Flow<Result<TodoDomainModel>> {
+        return todoDataSource.getTodo(id).map { result ->
             when (result) {
                 is Result.Success -> Result.Success(result.data.asDomainModel())
                 is Result.Error -> Result.Error(result.error)
